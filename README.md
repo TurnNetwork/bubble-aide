@@ -1,6 +1,5 @@
 # bubble-aide
 The Bubble Blockchain Assistant can help you easily and quickly access the Bubble blockchain. 
-1111
 
 ##  installation
 
