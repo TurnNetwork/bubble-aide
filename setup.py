@@ -23,7 +23,7 @@ with open('./README.md', encoding='utf-8') as readme:
 setup(
     name='bubble-aide',
     # *IMPORTANT*: Don't manually change the version here. Use the 'bumpversion' utility.
-    version='2.1.5',
+    version='2.1.6',
     description="""bubble aide""",
     # long_description=long_description,
     # long_description_content_type='text/markdown',

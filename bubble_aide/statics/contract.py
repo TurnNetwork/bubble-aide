@@ -1,3 +1,4 @@
+import copy
 import functools
 from functools import wraps, partial
 from typing import TYPE_CHECKING
@@ -95,7 +96,11 @@ def contract_transaction(func):
     @functools.wraps(func)
     def wrapper(self, *args, txn: dict = None, private_key=None, **kwargs):
         # Fill in the from address to prevent contract transactions from failing to verify the address when estimating gas
-        txn = txn or {}
+        # txn = txn or {}
+        if txn:
+            txn = copy.deepcopy(txn)
+        else:
+            txn = {}
         if not txn.get('from'):
             account = self.aide.bub.account.from_key(private_key) if private_key else self.aide.account
             if account:

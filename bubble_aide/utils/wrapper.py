@@ -1,3 +1,4 @@
+import copy
 import functools
 
 
@@ -9,7 +10,11 @@ def contract_transaction(fid=None, default_txn=None):
 
         @functools.wraps(func)
         def wrapper(self, *args, txn: dict = None, private_key=None, **kwargs):
-            txn = txn or {}
+            # txn = txn or {}
+            if txn:
+                txn = copy.deepcopy(txn)
+            else:
+                txn = {}
             if default_txn:
                 txn.update(default_txn)
 

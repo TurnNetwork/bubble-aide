@@ -1,6 +1,5 @@
 # bubble-aide
-The Bubble Blockchain Assistant can help you easily and quickly access the Bubble blockchain. 
-8888888
+The Bubble Blockchain Assistant can help you easily and quickly access the Bubble blockchain.
 
 ##  installation
 
