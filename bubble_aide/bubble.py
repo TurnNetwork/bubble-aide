@@ -14,14 +14,15 @@ class Bubble(PrecompileContract):
         super().__init__(aide)
         self.address = self.aide.web3.subChain.bubble.ADDRESS
 
-    # @contract_transaction()
-    # def create_bubble(self,
-    #                   private_key=None,
-    #                   txn=None,
-    #                   ):
-    #
-    #     return self.aide.web3.subChain.bubble.create_bubble()
-    #
+    @contract_transaction()
+    def create_bubble(self,
+                      size,
+                      private_key=None,
+                      txn=None,
+                      ):
+
+        return self.aide.web3.subChain.bubble.select_bubble(size)
+
     # @contract_transaction()
     # def release_bubble(self,
     #                  bubble_id,
